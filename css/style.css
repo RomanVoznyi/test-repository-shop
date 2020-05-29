@@ -11,6 +11,7 @@
   --accent-color: #d7b399;
 
   --background-cream-color: #f9f6f1;
+  --background-gray-color: #f4f4f4;
   --background-white-color: #ffffff;
   --background-black-color: #212121;
   --background-accent-color: #d7b399;
@@ -49,11 +50,6 @@ li {
   padding: 0;
   margin: 0;
   list-style: none;
-}
-
-.svg,
-.svg > path {
-  fill: inherit;
 }
 
 .container {
@@ -143,6 +139,8 @@ li {
 }
 
 .category-icon {
+  width: 8px;
+  height: 8px;
   margin-left: 10px;
   vertical-align: middle;
 }
@@ -207,6 +205,8 @@ li {
 }
 
 .logo-icon {
+  width: 40px;
+  height: 40px;
   margin-right: 20px;
 }
 
@@ -251,12 +251,15 @@ li {
 }
 
 .basket-image {
+  width: 30px;
+  height: 30px;
   margin-right: 15px;
 }
 
 .basket-text-icon {
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
+  margin-right: -3px;
   transform: rotate(90deg);
 
   fill: var(--accent-color);
@@ -403,7 +406,11 @@ li {
 .top-section {
   padding-top: 60px;
 
-  background-color: #f4f4f4;
+  background: linear-gradient(
+    to right,
+    var(--background-cream-color) 50%,
+    var(--background-gray-color) 50%
+  );
 }
 
 .collection-box {
@@ -725,6 +732,11 @@ li {
   align-items: center;
   justify-content: center;
   margin-right: 5px;
+}
+
+.social-icon {
+  width: 16px;
+  height: 16px;
 }
 
 .copyrigts {
