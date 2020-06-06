@@ -11,6 +11,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <title>The Loop</title>
   </head>
@@ -23,18 +27,8 @@
           <li class="category-list-item">
             <a class="category-link" href="./another-page.html"
               >Для мужчин
-              <svg
-                class="category-icon svg"
-                width="8"
-                height="8"
-                viewBox="0 0 5 4"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2.5 4L0.334936 0.25L4.66506 0.25L2.5 4Z"
-                  fill="#212121"
-                />
+              <svg class="category-icon">
+                <use href="./img/sprite.svg#icon-triangl"></use>
               </svg>
             </a>
             <ul class="sub-list">
@@ -52,18 +46,8 @@
           <li class="category-list-item">
             <a class="category-link" href="./another-page.html">
               Для женщин
-              <svg
-                class="category-icon svg"
-                width="7"
-                height="7"
-                viewBox="0 0 5 4"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2.5 4L0.334936 0.25L4.66506 0.25L2.5 4Z"
-                  fill="#212121"
-                />
+              <svg class="category-icon">
+                <use href="./img/sprite.svg#icon-triangl"></use>
               </svg>
             </a>
             <ul class="sub-list">
@@ -81,18 +65,8 @@
           <li class="category-list-item">
             <a class="category-link" href="./another-page.html">
               Для детей
-              <svg
-                class="category-icon svg"
-                width="7"
-                height="7"
-                viewBox="0 0 5 4"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2.5 4L0.334936 0.25L4.66506 0.25L2.5 4Z"
-                  fill="#212121"
-                />
+              <svg class="category-icon">
+                <use href="./img/sprite.svg#icon-triangl"></use>
               </svg>
             </a>
             <ul class="sub-list">
@@ -108,14 +82,11 @@
             </ul>
           </li>
         </ul>
-        <a class="logo" href="./index.html"
-          ><img
-            class="logo-icon"
-            src="./img/logo.svg"
-            width="40"
-            height="40"
-            alt="logo-icon"
-          /><span class="logo-text">the loop</span></a
+        <a class="logo-link" href="./index.html">
+          <svg class="logo-icon">
+            <use href="./img/sprite.svg#icon-logo"></use>
+          </svg>
+          <span class="logo-text">the loop</span></a
         >
         <ul class="service-list">
           <li class="service-list-item">
@@ -125,32 +96,34 @@
             <a class="service-link" href="./another-page.html">Доставка</a>
           </li>
         </ul>
-        <a class="basket-link" href="./another-page.html">
-          <svg
-            class="basket-image"
-            width="30"
-            height="30"
-            viewBox="0 0 30 30"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M22.2936 11.4909L16.2385 2.40831C15.9632 2.13308 15.5505 1.85785 15.1376 1.85785C14.7248 1.85785 14.3119 1.99546 14.0367 2.40831L7.98165 11.4909H1.37615C0.550459 11.4909 0 12.0413 0 12.867C0 13.0046 0 13.1423 0 13.2799L3.44037 26.078C3.7156 27.179 4.81651 28.1423 6.05505 28.1423H23.945C25.1835 28.1423 26.2844 27.3166 26.5596 26.078L30 13.2799C30 13.1423 30 13.0046 30 12.867C30 12.0413 29.4495 11.4909 28.6239 11.4909H22.2936ZM11.0092 11.4909L15.1376 5.43583L19.2661 11.4909H11.0092ZM15.1376 22.5001C13.6239 22.5001 12.3853 21.2615 12.3853 19.7478C12.3853 18.234 13.6239 16.9955 15.1376 16.9955C16.6514 16.9955 17.8899 18.234 17.8899 19.7478C17.8899 21.2615 16.6514 22.5001 15.1376 22.5001Z"
-              fill="#212121"
-            />
+        <div class="basket-box" data-open-modal title="Нажми меня">
+          <svg class="basket-image animate__animated animate__bounce">
+            <use href="./img/sprite.svg#icon-basket"></use>
           </svg>
-          <svg
-            class="basket-text-icon svg"
-            width="5"
-            height="5"
-            viewBox="0 1 5 5"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M2.5 4L0.334936 0.25L4.66506 0.25L2.5 4Z" fill="#212121" />
+          <svg class="basket-text-icon">
+            <use href="./img/sprite.svg#icon-triangl"></use>
           </svg>
-          <span class="basket-text">5</span></a
-        >
+          <span class="basket-text">5</span>
+        </div>
+        <div class="backdrop is-hidden" data-backdrop>
+          <div class="modal">
+            <p class="modal-title">Ваша корзина:</p>
+            <ul class="modal-list">
+              <li class="modal-list-item">Lorem ipsum dolor sit amet.</li>
+              <li class="modal-list-item">Lorem ipsum dolor sit amet.</li>
+              <li class="modal-list-item">Lorem ipsum dolor sit amet.</li>
+              <li class="modal-list-item">Lorem ipsum dolor sit amet.</li>
+              <li class="modal-list-item">Lorem ipsum dolor sit amet.</li>
+            </ul>
+            <p class="modal-title">ИТОГО: 5000 грн.</p>
+            <button class="button modal-button" data-close-modal>
+              Закрыть
+            </button>
+            <a class="button modal-button" href="./another-page.html"
+              >Оплатить</a
+            >
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -173,14 +146,11 @@
       <section class="black-section">
         <div class="container foot-first-level">
           <div class="foot-logo-box">
-            <a class="logo foot-logo" href="./index.html"
-              ><img
-                class="logo-icon"
-                src="./img/logo.svg"
-                width="40"
-                height="40"
-                alt="logo-icon"
-              /><span class="logo-text">the loop</span></a
+            <a class="logo-link foot-logo" href="./index.html">
+              <svg class="logo-icon">
+                <use href="./img/sprite.svg#icon-logo"></use>
+              </svg>
+              <span class="logo-text">the loop</span></a
             >
             <p class="logo-description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
@@ -256,7 +226,9 @@
                 <li class="inner-list-item">
                   <a class="social-link foot-link" href="https://vk.com/">
                     <div class="ico-box">
-                      <img src="./img/vk.svg" alt="vk-ico" />
+                      <svg class="social-icon">
+                        <use href="./img/sprite.svg#icon-vk"></use>
+                      </svg>
                     </div>
                     <h3 class="social-link-title">VK.com</h3>
                   </a>
@@ -267,7 +239,9 @@
                     href="https://www.facebook.com/"
                   >
                     <div class="ico-box">
-                      <img src="./img/fb.svg" alt="fb-ico" />
+                      <svg class="social-icon">
+                        <use href="./img/sprite.svg#icon-fb"></use>
+                      </svg>
                     </div>
                     <h3 class="social-link-title">Facebook</h3>
                   </a>
@@ -278,7 +252,9 @@
                     href="https://www.instagram.com/"
                   >
                     <div class="ico-box">
-                      <img src="./img/insta.svg" alt="insta-ico" />
+                      <svg class="social-icon">
+                        <use href="./img/sprite.svg#icon-insta"></use>
+                      </svg>
                     </div>
                     <h3 class="social-link-title">Instagram</h3>
                   </a>
@@ -293,5 +269,26 @@
         <p class="copyrigts-text">Политика приватности</p>
       </div>
     </footer>
+
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector("[data-open-modal]"),
+        closeModalBtn: document.querySelector("[data-close-modal]"),
+        backdrop: document.querySelector("[data-backdrop]"),
+      };
+
+      refs.openModalBtn.addEventListener("click", toggleModal);
+      refs.closeModalBtn.addEventListener("click", toggleModal);
+
+      refs.backdrop.addEventListener("click", logBackdropClick);
+
+      function toggleModal() {
+        refs.backdrop.classList.toggle("is-hidden");
+      }
+
+      function logBackdropClick() {
+        console.log("Это клик в бекдроп");
+      }
+    </script>
   </body>
 </html>

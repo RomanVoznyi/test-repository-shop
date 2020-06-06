@@ -11,6 +11,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <title>The Loop</title>
   </head>
@@ -77,7 +81,7 @@
             </ul>
           </li>
         </ul>
-        <a class="logo" href="./index.html">
+        <a class="logo-link" href="./index.html">
           <svg class="logo-icon">
             <use href="./img/sprite.svg#icon-logo"></use>
           </svg>
@@ -91,15 +95,34 @@
             <a class="service-link" href="./another-page.html">Доставка</a>
           </li>
         </ul>
-        <a class="basket-link" href="./another-page.html">
-          <svg class="basket-image">
+        <div class="basket-box" data-open-modal title="Нажми меня">
+          <svg class="basket-image animate__animated animate__bounce">
             <use href="./img/sprite.svg#icon-basket"></use>
           </svg>
           <svg class="basket-text-icon">
             <use href="./img/sprite.svg#icon-triangl"></use>
           </svg>
-          <span class="basket-text">5</span></a
-        >
+          <span class="basket-text">5</span>
+        </div>
+        <div class="backdrop is-hidden" data-backdrop>
+          <div class="modal">
+            <p class="modal-title">Ваша корзина:</p>
+            <ul class="modal-list">
+              <li class="modal-list-item">Lorem ipsum dolor sit amet.</li>
+              <li class="modal-list-item">Lorem ipsum dolor sit amet.</li>
+              <li class="modal-list-item">Lorem ipsum dolor sit amet.</li>
+              <li class="modal-list-item">Lorem ipsum dolor sit amet.</li>
+              <li class="modal-list-item">Lorem ipsum dolor sit amet.</li>
+            </ul>
+            <p class="modal-title">ИТОГО: 5000 грн.</p>
+            <button class="button modal-button" data-close-modal>
+              Закрыть
+            </button>
+            <a class="button modal-button" href="./another-page.html"
+              >Оплатить</a
+            >
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -108,7 +131,7 @@
       <!-- Главный сектор -->
       <section class="hero-section">
         <div class="container">
-          <h1 class="is-hidden">Акции</h1>
+          <h1 class="is-hidden">Магазин одежды</h1>
           <div class="advertising-box first-box">
             <div class="advertising-item">
               <h2 class="advertising-title">Зимняя распродажа</h2>
@@ -177,116 +200,133 @@
 
       <!-- Вся коолекция  -->
       <section class="no-padding-section">
-        <section class="top-section">
+        <h2 class="is-hidden">Вся коллекция</h2>
+        <div class="top-section">
           <div class="container collection-box">
             <article class="collection-article">
-              <h2 class="article-title">
+              <h3 class="article-title">
                 МУЖСКАЯ <span class="article-title-label">КОЛЛЕКЦИЯ</span>
-              </h2>
+              </h3>
               <p class="article-description">Обувь, полуверы, костюмы</p>
               <a class="button arrow" href="./another-page.html">&#8594;</a>
               <img
                 class="article-image"
                 src="./img/man.png"
-                width="190"
+                height="170"
                 alt="man-image"
               />
             </article>
             <article class="collection-article">
-              <h2 class="article-title">
+              <h3 class="article-title">
                 ЖЕНСКАЯ <span class="article-title-label">КОЛЛЕКЦИЯ</span>
-              </h2>
+              </h3>
               <p class="article-description">Обувь, полуверы, костюмы</p>
               <a class="button arrow" href="./another-page.html">&#8594;</a>
               <img
                 class="article-image"
                 src="./img/woman.png"
-                width="190"
+                height="170"
                 alt="woman-image"
               />
             </article>
           </div>
-        </section>
-        <section class="bottom-section">
+        </div>
+        <div class="bottom-section">
           <div class="container collection-box">
             <ul class="clothes-list">
               <li class="clothes-list-item">
-                <a class="clothes-link" href="./another-page.html"
-                  ><img
-                    src="./img/t-shirt-grey.jpg"
-                    width="277"
+                <a class="clothes-link" href="./another-page.html">
+                  <img
+                    class="clothes-image"
+                    src="./img/t-shirt.png"
+                    width="190"
                     alt="t-shirt-image"
                   />
-                  <h3 class="clothes-title">Футболка, # 0001</h3>
-                </a>
-                <a class="clothes-link" href="./another-page.html"
-                  ><img
-                    src="./img/t-shirt-cream.jpg"
-                    width="277"
-                    alt="t-shirt-image"
-                  />
-                  <h3 class="clothes-title">Футболка, # 0002</h3>
+                  <h4 class="clothes-title">Футболка, # 0001</h4>
                 </a>
               </li>
               <li class="clothes-list-item">
                 <a class="clothes-link" href="./another-page.html"
                   ><img
-                    src="./img/t-shirt-grey.jpg"
-                    width="277"
+                    class="clothes-image"
+                    src="./img/t-shirt.png"
+                    width="190"
                     alt="t-shirt-image"
                   />
-                  <h3 class="clothes-title">Футболка, # 0003</h3>
+                  <h4 class="clothes-title">Футболка, # 0002</h4>
                 </a>
+              </li>
+              <li class="clothes-list-item">
                 <a class="clothes-link" href="./another-page.html"
                   ><img
-                    src="./img/t-shirt-cream.jpg"
-                    width="277"
+                    class="clothes-image"
+                    src="./img/t-shirt.png"
+                    width="190"
                     alt="t-shirt-image"
                   />
-                  <h3 class="clothes-title">Футболка, # 0004</h3>
+                  <h4 class="clothes-title">Футболка, # 0003</h4>
+                </a>
+              </li>
+              <li class="clothes-list-item">
+                <a class="clothes-link" href="./another-page.html"
+                  ><img
+                    class="clothes-image"
+                    src="./img/t-shirt.png"
+                    width="190"
+                    alt="t-shirt-image"
+                  />
+                  <h4 class="clothes-title">Футболка, # 0004</h4>
                 </a>
               </li>
             </ul>
             <ul class="clothes-list">
               <li class="clothes-list-item">
-                <a class="clothes-link" href="./another-page.html"
-                  ><img
-                    src="./img/t-shirt-grey.jpg"
-                    width="277"
+                <a class="clothes-link" href="./another-page.html">
+                  <img
+                    class="clothes-image"
+                    src="./img/t-shirt.png"
+                    width="190"
                     alt="t-shirt-image"
                   />
-                  <h3 class="clothes-title">Футболка, # 1001</h3>
-                </a>
-                <a class="clothes-link" href="./another-page.html"
-                  ><img
-                    src="./img/t-shirt-cream.jpg"
-                    width="277"
-                    alt="t-shirt-image"
-                  />
-                  <h3 class="clothes-title">Футболка, # 1002</h3>
+                  <h4 class="clothes-title">Футболка, # 1001</h4>
                 </a>
               </li>
               <li class="clothes-list-item">
                 <a class="clothes-link" href="./another-page.html"
                   ><img
-                    src="./img/t-shirt-grey.jpg"
-                    width="277"
+                    class="clothes-image"
+                    src="./img/t-shirt.png"
+                    width="190"
                     alt="t-shirt-image"
                   />
-                  <h3 class="clothes-title">Футболка, # 1003</h3>
+                  <h4 class="clothes-title">Футболка, # 1002</h4>
                 </a>
+              </li>
+              <li class="clothes-list-item">
                 <a class="clothes-link" href="./another-page.html"
                   ><img
-                    src="./img/t-shirt-cream.jpg"
-                    width="277"
+                    class="clothes-image"
+                    src="./img/t-shirt.png"
+                    width="190"
                     alt="t-shirt-image"
                   />
-                  <h3 class="clothes-title">Футболка, # 1004</h3>
+                  <h4 class="clothes-title">Футболка, # 1003</h4>
+                </a>
+              </li>
+              <li class="clothes-list-item">
+                <a class="clothes-link" href="./another-page.html"
+                  ><img
+                    class="clothes-image"
+                    src="./img/t-shirt.png"
+                    width="190"
+                    alt="t-shirt-image"
+                  />
+                  <h4 class="clothes-title">Футболка, # 1004</h4>
                 </a>
               </li>
             </ul>
           </div>
-        </section>
+        </div>
       </section>
 
       <!-- Новинки -->
@@ -471,7 +511,7 @@
       <section class="black-section">
         <div class="container foot-first-level">
           <div class="foot-logo-box">
-            <a class="logo foot-logo" href="./index.html">
+            <a class="logo-link foot-logo" href="./index.html">
               <svg class="logo-icon">
                 <use href="./img/sprite.svg#icon-logo"></use>
               </svg>
@@ -592,5 +632,26 @@
         <p class="copyrigts-text">Политика приватности</p>
       </div>
     </footer>
+
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector("[data-open-modal]"),
+        closeModalBtn: document.querySelector("[data-close-modal]"),
+        backdrop: document.querySelector("[data-backdrop]"),
+      };
+
+      refs.openModalBtn.addEventListener("click", toggleModal);
+      refs.closeModalBtn.addEventListener("click", toggleModal);
+
+      refs.backdrop.addEventListener("click", logBackdropClick);
+
+      function toggleModal() {
+        refs.backdrop.classList.toggle("is-hidden");
+      }
+
+      function logBackdropClick() {
+        console.log("Это клик в бекдроп");
+      }
+    </script>
   </body>
 </html>
