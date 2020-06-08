@@ -106,6 +106,7 @@
           <span class="basket-text">5</span>
         </div>
         <div class="backdrop is-hidden" data-backdrop>
+          <a class="backdrop-link" href="#" data-close-mod-link></a>
           <div class="modal">
             <p class="modal-title">Ваша корзина:</p>
             <ul class="modal-list">
@@ -116,7 +117,11 @@
               <li class="modal-list-item">Lorem ipsum dolor sit amet.</li>
             </ul>
             <p class="modal-title">ИТОГО: 5000 грн.</p>
-            <button class="button modal-button" data-close-modal>
+            <button
+              class="button modal-button"
+              id="close-button"
+              data-close-mod-btn
+            >
               Закрыть
             </button>
             <a class="button modal-button" href="./another-page.html"
@@ -273,21 +278,17 @@
     <script>
       const refs = {
         openModalBtn: document.querySelector("[data-open-modal]"),
-        closeModalBtn: document.querySelector("[data-close-modal]"),
+        closeModalBtn: document.querySelector("[data-close-mod-btn]"),
+        closeModalLink: document.querySelector("[data-close-mod-link]"),
         backdrop: document.querySelector("[data-backdrop]"),
       };
 
       refs.openModalBtn.addEventListener("click", toggleModal);
       refs.closeModalBtn.addEventListener("click", toggleModal);
-
-      refs.backdrop.addEventListener("click", logBackdropClick);
+      refs.closeModalLink.addEventListener("click", toggleModal);
 
       function toggleModal() {
         refs.backdrop.classList.toggle("is-hidden");
-      }
-
-      function logBackdropClick() {
-        console.log("Это клик в бекдроп");
       }
     </script>
   </body>
